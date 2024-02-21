@@ -1,0 +1,7 @@
+<mat-toolbar>
+  <ng-template *ngFor="let page of PAGES">
+    <a mat-button href="{{ page.path }}">
+      {{ page.label }}
+    </a>
+  </ng-template>
+</mat-toolbar>
