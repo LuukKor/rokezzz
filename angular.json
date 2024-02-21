@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "rokezzz:build:production"
+              "buildTarget": "rokezzz:build:production"
             },
             "development": {
-              "browserTarget": "rokezzz:build:development"
+              "buildTarget": "rokezzz:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rokezzz:build"
+            "buildTarget": "rokezzz:build"
           }
         },
         "test": {
