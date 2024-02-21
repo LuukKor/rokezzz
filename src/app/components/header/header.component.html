@@ -1,7 +1,32 @@
-<mat-toolbar>
-  <ng-template *ngFor="let page of PAGES">
-    <a mat-button href="{{ page.path }}">
-      {{ page.label }}
-    </a>
-  </ng-template>
+<mat-toolbar [classList]="'header'">
+  <div class="container">
+    <div class="header__content">
+      <app-logo></app-logo>
+      <nav class="header__buttons" *ngIf="!isSmallScreen; else small">
+        <a
+          *ngFor="let page of PAGES"
+          mat-button
+          [routerLink]="page.path"
+          routerLinkActive="active"
+        >
+          {{ page.label }}
+        </a>
+      </nav>
+      <ng-template #small>
+        <button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <a
+            *ngFor="let page of PAGES"
+            mat-button
+            [routerLink]="page.path"
+            routerLinkActive="active"
+          >
+            {{ page.label }}
+          </a>
+        </mat-menu>
+      </ng-template>
+    </div>
+  </div>
 </mat-toolbar>
