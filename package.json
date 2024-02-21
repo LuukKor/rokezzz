@@ -7,7 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "dev:ssr": "ng run rokezzz:serve-ssr",
+    "serve:ssr": "node dist/rokezzz/server/main.js",
+    "build:ssr": "ng build && ng run rokezzz:server",
+    "prerender": "ng run rokezzz:prerender"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +24,10 @@
     "@angular/material": "^16.2.14",
     "@angular/platform-browser": "^17.2.1",
     "@angular/platform-browser-dynamic": "^17.2.1",
+    "@angular/platform-server": "^17.2.1",
     "@angular/router": "^17.2.1",
+    "@angular/ssr": "^17.2.0",
+    "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.0"
@@ -34,9 +41,12 @@
     "@angular-eslint/template-parser": "16.3.1",
     "@angular/cli": "^17.2.0",
     "@angular/compiler-cli": "^17.2.1",
+    "@types/express": "^4.17.17",
     "@types/jasmine": "~4.3.0",
+    "@types/node": "^18.18.0",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
+    "browser-sync": "^3.0.0",
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
