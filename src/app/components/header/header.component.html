@@ -1,9 +1,10 @@
-<mat-toolbar [classList]="'header'">
+<mat-toolbar class="header">
   <div class="container">
     <div class="header__content">
       <app-logo></app-logo>
-      <nav class="header__buttons" *ngIf="!isSmallScreen; else small">
+      <nav class="header__buttons" *ngIf="!getIsSmallScreen">
         <a
+          class="header__button"
           *ngFor="let page of PAGES"
           mat-button
           [routerLink]="page.path"
@@ -12,21 +13,24 @@
           {{ page.label }}
         </a>
       </nav>
-      <ng-template #small>
-        <button mat-button [matMenuTriggerFor]="menu">
+      <div *ngIf="getIsSmallScreen">
+        <button [matMenuTriggerFor]="menu" mat-mini-fab color="primary">
           <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-          <a
-            *ngFor="let page of PAGES"
-            mat-button
-            [routerLink]="page.path"
-            routerLinkActive="active"
-          >
-            {{ page.label }}
-          </a>
+          <nav class="header__buttons header__buttons--mobile">
+            <a
+              class="header__button"
+              mat-button
+              *ngFor="let page of PAGES"
+              [routerLink]="page.path"
+              routerLinkActive="active"
+            >
+              {{ page.label }}
+            </a>
+          </nav>
         </mat-menu>
-      </ng-template>
+      </div>
     </div>
   </div>
 </mat-toolbar>
