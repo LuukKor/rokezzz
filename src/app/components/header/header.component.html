@@ -14,13 +14,13 @@
         </a>
       </nav>
       <div *ngIf="getIsSmallScreen">
-        <button [matMenuTriggerFor]="menu" mat-mini-fab color="primary">
+        <button [matMenuTriggerFor]="menu" mat-icon-button color="accent">
           <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
           <nav class="header__buttons header__buttons--mobile">
             <a
-              class="header__button"
+              class="header__button header__button--mobile"
               mat-button
               *ngFor="let page of PAGES"
               [routerLink]="page.path"

@@ -4,27 +4,27 @@ interface IPages {
 }
 export const PAGES: IPages[] = [
   {
+    label: 'O mnie',
+    path: '/',
+  },
+  {
     label: 'Osiągnięcia',
-    path: 'osiagniecia',
+    path: '/osiagniecia',
   },
   {
     label: 'Przemiany',
-    path: 'przemiany',
+    path: '/przemiany',
   },
   {
     label: 'Galeria',
-    path: 'galeria',
-  },
-  {
-    label: 'O mnie',
-    path: 'o-mnie',
+    path: '/galeria',
   },
   {
     label: 'Umów trening',
-    path: 'umow-trening',
+    path: '/umow-trening',
   },
   {
     label: 'Kontakt',
-    path: 'kontakt',
+    path: '/kontakt',
   },
 ];

@@ -5,6 +5,13 @@
   padding: 10px 0;
   height: 100px;
 
+
+  @media(max-width: 599px) {
+    .mat-toolbar-row,.mat-toolbar-single-row {
+      height:var(--mat-toolbar-mobile-height)
+    }
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
@@ -25,12 +32,14 @@
   }
 
   &__button {
-    width: 100%;
-
     &:not(disabled) {
       &.active {
         color: $primary-default;
       }
+    }
+
+    &--mobile {
+      width: 100%;
     }
   }
 }

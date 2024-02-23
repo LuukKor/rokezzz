@@ -1,0 +1,4 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$primary-default: mat.get-color-from-palette(mat.$deep-purple-palette, A700);
