@@ -1,9 +1,11 @@
 @import "src/variables";
 
 .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
 
-
-  @media(max-width: 599px) {
+  @media(map-get($breakpoints, XSmall)) {
     .mat-toolbar-row,
     .mat-toolbar-single-row {
       height: 80px;

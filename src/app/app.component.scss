@@ -1,0 +1,9 @@
+@import "src/variables";
+
+main {
+  padding-top: 100px;
+
+  @media(map-get($breakpoints, XSmall)) {
+    padding-top: 80px;
+  }
+}
