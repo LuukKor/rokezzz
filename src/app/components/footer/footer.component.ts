@@ -1,13 +1,12 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
-import { FOOTER_COLS, CONTACT_DATA } from '../../constants';
+import { FOOTER_COLS, CONTACT_DATA } from '@/constants';
 import { NgForOf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
-import { AddSpacesEveryNPipe } from '../../pipes/add-spaces-every-n.pipe';
+import { AddSpacesEveryNPipe } from '@/pipes/add-spaces-every-n.pipe';
 import { MatIconModule } from '@angular/material/icon';
-import { ResponsiveService } from '../../services/responsive.service';
 
 @Component({
   selector: 'app-footer',
