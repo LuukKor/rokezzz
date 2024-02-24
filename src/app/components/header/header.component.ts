@@ -1,22 +1,15 @@
-import {
-  Component,
-  OnDestroy,
-  OnInit,
-  signal,
-  ViewEncapsulation,
-} from '@angular/core';
+import { Component, OnDestroy, OnInit, WritableSignal } from '@angular/core';
 import { PAGES } from '../../constants';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import { LogoComponent } from '../logo/logo.component';
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
-import { Subscription } from 'rxjs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ResponsiveService } from '../../services/responsive.service';
 
 @Component({
   selector: 'app-header',
@@ -36,32 +29,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   ],
   standalone: true,
 })
-export class HeaderComponent implements OnInit, OnDestroy {
+export class HeaderComponent {
+  constructor(private _responsiveService: ResponsiveService) {}
   protected readonly PAGES = PAGES;
-  private bpSubscription: Subscription = new Subscription();
-  private isSmallScreen = signal(false);
 
-  constructor(
-    private breakpointObserver: BreakpointObserver,
-    private router: Router,
-  ) {}
-  private bpObserve() {
-    this.bpSubscription = this.breakpointObserver
-      .observe([Breakpoints.XSmall, Breakpoints.Small])
-      .subscribe((result) => {
-        this.isSmallScreen.set(result.matches);
-      });
-  }
-
-  get getIsSmallScreen() {
-    return this.isSmallScreen();
-  }
-
-  ngOnInit() {
-    this.bpObserve();
-  }
-
-  ngOnDestroy() {
-    this.bpSubscription.unsubscribe();
+  get isSmallScreen() {
+    return this._responsiveService.isSmallScreen();
   }
 }
