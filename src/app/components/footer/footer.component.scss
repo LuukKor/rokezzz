@@ -1,0 +1,27 @@
+@import "src/variables";
+
+.footer {
+  &__content {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 5px);
+    align-items: flex-start;
+
+    .mat-h3 {
+      &--mb0 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__col-link {
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+  }
+}
