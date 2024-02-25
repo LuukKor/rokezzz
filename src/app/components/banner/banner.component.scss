@@ -1,6 +1,4 @@
-
 @import "src/variables";
-
 
 .banner {
   position: relative;
@@ -39,8 +37,14 @@
 
     .mdc-card {
       padding: 30px;
-      background-color: #ffffffbd;
+      background-color: transparent;
       text-align: center;
+      color: #fff;
+      text-shadow: 1px 1px #000;
+
+      .mdc-button {
+        text-shadow: none;
+      }
     }
   }
 }

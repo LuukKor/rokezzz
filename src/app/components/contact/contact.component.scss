@@ -1,0 +1,19 @@
+@import "src/variables";
+
+.contact {
+  margin-top: 34px;
+  background: $primary-default--50;
+  text-align: center;
+  padding: 40px 0 4px;
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 10px;
+  }
+
+  &__link {
+    min-width: 250px;
+  }
+}

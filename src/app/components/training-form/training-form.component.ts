@@ -43,7 +43,7 @@ interface ITrainingForm {
 })
 export class TrainingFormComponent {
   constructor(private _snackBar: MatSnackBar) {}
-
+  // TODO: handle incoming topic from buttons
   @Input() topicVal = '';
   private _form: FormGroup<ITrainingForm> = new FormGroup({
     name: new FormControl('', [Validators.required]),

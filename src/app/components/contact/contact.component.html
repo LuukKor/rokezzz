@@ -1,0 +1,30 @@
+<section class="contact" id="kontakt">
+  <div class="container">
+    <h3 class="mat-h1">Skontaktuj się ze mną</h3>
+    <div class="contact__content">
+      <p class="contact__address mat-h2">
+        {{ CONTACT_DATA.address }}<br />
+        {{ CONTACT_DATA.postCode }}, {{ CONTACT_DATA.city }}
+      </p>
+      <div class="contact__links">
+        <a
+          class="contact__link mat-h2"
+          mat-raised-button
+          [href]="'mailto:' + CONTACT_DATA.mail"
+        >
+          <mat-icon>mail</mat-icon>{{ CONTACT_DATA.mail }}
+        </a>
+        <a
+          class="contact__link mat-h2"
+          mat-raised-button
+          [href]="'tel:' + CONTACT_DATA.phone"
+        >
+          <mat-icon> phone </mat-icon>
+          {{ CONTACT_DATA.phone | addSpacesEveryN: 3 }}
+        </a>
+      </div>
+    </div>
+
+    <h3 class="mat-subheading-1">lub</h3>
+  </div>
+</section>

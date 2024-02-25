@@ -43,6 +43,8 @@ export class HeaderComponent {
     fragment: 'exact',
   };
 
+  // TODO: handle active route on scroll
+
   get isSmallScreen(): boolean {
     return this._responsiveService.isSmallScreen();
   }
