@@ -1,14 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { AbstractControl, FormControl } from '@angular/forms';
 
 @Pipe({
-  name: 'addSpacesEveryN',
+  name: 'formControl',
   standalone: true,
 })
-export class AddSpacesEveryNPipe implements PipeTransform {
-  transform(value = '', n: number): string {
-    const arr: string[] = Array.from(value).map((v, i): string => {
-      return i % n !== 0 ? v : ' ' + v;
-    });
-    return arr.join('');
+export class FormControlPipe implements PipeTransform {
+  transform(value: AbstractControl): FormControl<(typeof value)['value']> {
+    return value as FormControl<(typeof value)['value']>;
   }
 }
