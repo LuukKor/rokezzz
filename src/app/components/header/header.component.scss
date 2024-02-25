@@ -40,6 +40,7 @@
 
   &__button {
     &:not(disabled) {
+      &.active-route,
       &.active {
         color: $primary-default;
       }

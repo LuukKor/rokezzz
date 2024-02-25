@@ -1,6 +1,7 @@
 interface IPages {
   label: string;
   path: string;
+  fragment?: string;
 }
 
 interface IFooterCols {
@@ -23,23 +24,28 @@ export const PAGES: IPages[] = [
   },
   {
     label: 'Osiągnięcia',
-    path: '/osiagniecia',
+    path: '/example',
+    fragment: '1',
   },
   {
     label: 'Przemiany',
-    path: '/przemiany',
+    path: '/example',
+    fragment: '2',
   },
   {
     label: 'Galeria',
-    path: '/galeria',
+    path: '/example',
+    fragment: '3',
   },
   {
     label: 'Umów trening',
-    path: '/umow-trening',
+    path: '/',
+    fragment: 'umow-trening',
   },
   {
     label: 'Kontakt',
-    path: '/kontakt',
+    path: '/',
+    fragment: 'kontakt',
   },
 ];
 

@@ -2,26 +2,33 @@
   <div class="container">
     <div class="footer__content">
       <div class="footer__col">
-        <h5 class="mat-h3"><b>Kontakt</b></h5>
-        <p class="mat-h3 mat-h3--mb0">
-          {{ CONTACT_DATA.address }}<br />
-          {{ CONTACT_DATA.postCode }}, {{ CONTACT_DATA.city }}
-        </p>
-        <a
-          class="footer__col-link"
-          mat-button
-          [href]="'mailto:' + CONTACT_DATA.mail"
-        >
-          <mat-icon>mail</mat-icon>{{ CONTACT_DATA.mail }}
-        </a>
-        <a
-          class="footer__col-link"
-          mat-button
-          [href]="'tel:' + CONTACT_DATA.phone"
-        >
-          <mat-icon> phone </mat-icon>
-          {{ CONTACT_DATA.phone | addSpacesEveryN: 3 }}
-        </a>
+        <span class="mat-h3"></span>
+        <div class="footer__row">
+          <div class="footer__logo">
+            <app-logo />
+          </div>
+          <div class="footer__col footer__col--wide">
+            <p class="mat-h3 mat-h3--mb0">
+              {{ CONTACT_DATA.address }}<br />
+              {{ CONTACT_DATA.postCode }}, {{ CONTACT_DATA.city }}
+            </p>
+            <a
+              class="footer__col-link"
+              mat-button
+              [href]="'mailto:' + CONTACT_DATA.mail"
+            >
+              <mat-icon>mail</mat-icon>{{ CONTACT_DATA.mail }}
+            </a>
+            <a
+              class="footer__col-link"
+              mat-button
+              [href]="'tel:' + CONTACT_DATA.phone"
+            >
+              <mat-icon> phone </mat-icon>
+              {{ CONTACT_DATA.phone | addSpacesEveryN: 3 }}
+            </a>
+          </div>
+        </div>
       </div>
       <div class="footer__col" *ngFor="let col of FOOTER_COLS">
         <h5 class="mat-h3 mat-h3--mb0">

@@ -10,12 +10,20 @@
     gap: 10px;
   }
 
+  &__row {
+    display: flex;
+  }
+
   &__col {
     display: flex;
     flex-direction: column;
     width: calc(50% - 5px);
     align-items: flex-start;
     gap: 5px;
+
+    &--wide {
+      width: 100%;
+    }
 
     .mat-h3 {
       &--mb0 {

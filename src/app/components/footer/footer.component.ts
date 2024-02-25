@@ -7,6 +7,7 @@ import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { AddSpacesEveryNPipe } from '@/pipes/add-spaces-every-n/add-spaces-every-n.pipe';
 import { MatIconModule } from '@angular/material/icon';
+import { LogoComponent } from '@/components/logo/logo.component';
 
 @Component({
   selector: 'app-footer',
@@ -19,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     AddSpacesEveryNPipe,
     MatIconModule,
+    LogoComponent,
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',

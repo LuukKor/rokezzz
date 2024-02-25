@@ -1,3 +1,4 @@
+<script src="../../app.component.ts"></script>
 <header class="header">
   <mat-toolbar class="header__toolbar">
     <div class="container">
@@ -9,7 +10,9 @@
             *ngFor="let page of PAGES"
             mat-button
             [routerLink]="page.path"
+            [fragment]="page?.fragment"
             routerLinkActive="active"
+            [routerLinkActiveOptions]="linkActiveOptions"
           >
             {{ page.label }}
           </a>

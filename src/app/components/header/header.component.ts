@@ -4,7 +4,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import { LogoComponent } from '@/components/logo/logo.component';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import {
+  IsActiveMatchOptions,
+  RouterLink,
+  RouterLinkActive,
+} from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -32,8 +36,14 @@ import { ResponsiveService } from '@/services/responsive.service';
 export class HeaderComponent {
   constructor(private _responsiveService: ResponsiveService) {}
   protected readonly PAGES = PAGES;
+  public linkActiveOptions: IsActiveMatchOptions = {
+    matrixParams: 'exact',
+    queryParams: 'exact',
+    paths: 'exact',
+    fragment: 'exact',
+  };
 
-  get isSmallScreen() {
+  get isSmallScreen(): boolean {
     return this._responsiveService.isSmallScreen();
   }
 }
