@@ -38,14 +38,14 @@ export const PAGES: IPages[] = [
     fragment: '3',
   },
   {
-    label: 'Umów trening',
-    path: '/',
-    fragment: 'umow-trening',
-  },
-  {
     label: 'Kontakt',
     path: '/',
     fragment: 'kontakt',
+  },
+  {
+    label: 'Umów trening',
+    path: '/',
+    fragment: 'umow-trening',
   },
 ];
 

@@ -1,0 +1,47 @@
+@import "src/variables";
+
+.training-form {
+  margin-top: 40px;
+
+  .mat-h3 {
+    text-align: center;
+  }
+
+  .mat-mdc-form-field {
+    width: calc(50% - 5px);
+
+    @media (map-get($breakpoints, XSmall)) {
+      width: 100%;
+    }
+  }
+
+  .mdc-button {
+    text-transform: uppercase;
+    min-width: 220px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+
+    @media (map-get($breakpoints, XSmall)) {
+      gap: 0;
+    }
+
+    &--wide {
+      .mat-mdc-form-field {
+        width: 100%;
+      }
+    }
+  }
+}

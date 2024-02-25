@@ -28,7 +28,9 @@
                 mat-button
                 *ngFor="let page of PAGES"
                 [routerLink]="page.path"
+                [fragment]="page?.fragment"
                 routerLinkActive="active"
+                [routerLinkActiveOptions]="linkActiveOptions"
               >
                 {{ page.label }}
               </a>
