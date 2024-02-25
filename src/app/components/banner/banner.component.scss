@@ -1,0 +1,46 @@
+
+@import "src/variables";
+
+
+.banner {
+  position: relative;
+
+  &__picture {
+    display: flex;
+
+    @media #{map-get($breakpoints, XSmall)}, #{map-get($breakpoints, Small)} {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+
+    @media #{map-get($breakpoints, XSmall)}, #{map-get($breakpoints, Small)} {
+      position: static;
+      transform: none;
+      padding: 40px 0;
+      margin: 0 auto;
+    }
+
+    .mdc-card {
+      padding: 30px;
+      background-color: #ffffffbd;
+      text-align: center;
+    }
+  }
+}

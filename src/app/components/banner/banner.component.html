@@ -1,1 +1,34 @@
-<p>banner works!</p>
+<section class="banner">
+  <picture class="banner__picture">
+    <source
+      [media]="Breakpoints.Medium"
+      srcset="assets/images/banner-mobile.webp"
+    />
+    <img
+      class="banner__image"
+      mat-card-image
+      [ngSrc]="'assets/images/banner.webp'"
+      alt="Banner image"
+      height="1275"
+      width="1920"
+      [priority]="true"
+    />
+  </picture>
+  <div class="container">
+    <div class="banner__content">
+      <mat-card>
+        <mat-card-content>
+          <h1 class="mat-h1">Trener personalny</h1>
+          <p class="mat-h3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            vestibulum ac elit eu euismod. Curabitur accumsan lectus eget
+            interdum molestie. Nam at dignissim magna, in convallis erat. Etiam
+            gravida risus orci, nec dignissim lectus luctus ac. Integer in
+            imperdiet lectus, in elementum tortor. Donec urna lorem, scelerisque
+            vitae lectus at, mattis eleifend diam.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>

@@ -1,6 +1,8 @@
 @import "src/variables";
 
 .footer {
+  background-color: var(--mat-toolbar-container-background-color);
+  padding: 20px 0;
   &__content {
     display: flex;
     gap: 10px;
@@ -11,6 +13,7 @@
     flex-direction: column;
     width: calc(50% - 5px);
     align-items: flex-start;
+    gap: 5px;
 
     .mat-h3 {
       &--mb0 {
