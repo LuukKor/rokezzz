@@ -5,7 +5,7 @@ import { FOOTER_COLS, CONTACT_DATA } from '@/constants';
 import { NgForOf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
-import { AddSpacesEveryNPipe } from '@/pipes/add-spaces-every-n.pipe';
+import { AddSpacesEveryNPipe } from '@/pipes/add-spaces-every-n/add-spaces-every-n.pipe';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
