@@ -1,13 +1,48 @@
-.services {
+@import "src/variables";
 
+.services {
+  margin-top: 40px;
+
+  &__header {
+    text-align: center;
+  }
 }
 
 .services-cards {
-  display: flex;
-  gap: 10px;
-  padding: 10px;
+  display: grid;
+  gap: 20px;
+  padding: 10px 1px;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 
-  .mdc-card__media {
-    width: 100%;
+  @media #{map-get($breakpoints, Medium)} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media #{map-get($breakpoints, Small)} {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media #{map-get($breakpoints, XSmall)} {
+    grid-template-columns: 1fr;
+  }
+
+  &__card {
+    .mat-mdc-card-header {
+      margin-bottom: 10px;
+    }
+
+    .mdc-card__media {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .mdc-card__actions {
+      justify-content: flex-end;
+    }
   }
 }
