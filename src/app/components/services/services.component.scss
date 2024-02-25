@@ -1,0 +1,13 @@
+.services {
+
+}
+
+.services-cards {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+
+  .mdc-card__media {
+    width: 100%;
+  }
+}
