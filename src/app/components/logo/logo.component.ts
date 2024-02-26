@@ -11,16 +11,16 @@ import { NgOptimizedImage } from '@angular/common';
   styleUrl: './logo.component.scss',
 })
 export class LogoComponent implements OnInit {
-  constructor(private titleService: Title) {}
+  constructor(private _titleService: Title) {}
 
-  private title = '';
+  private _title = '';
 
   private setTitle(): void {
-    this.title = this.titleService.getTitle();
+    this._title = this._titleService.getTitle();
   }
 
   get getTitle(): string {
-    return this.title;
+    return this._title;
   }
 
   ngOnInit(): void {

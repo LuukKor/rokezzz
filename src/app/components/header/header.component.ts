@@ -52,6 +52,7 @@ export class HeaderComponent {
   readonly PAGES = PAGES;
   sections: NodeListOf<HTMLElement> | null = null;
   private _activeSection = signal('');
+  private _showHeader = signal(true);
   linkActiveOptions: IsActiveMatchOptions = {
     matrixParams: 'exact',
     queryParams: 'exact',
@@ -67,7 +68,14 @@ export class HeaderComponent {
   //TODO: fix onscroll active sections
 
   @HostListener('document:wheel', ['$event'])
-  onWheel(): void {
+  onWheel(e: WheelEvent): void {
+    console.log(e.deltaY);
+    if (e.deltaY > -1) {
+      this._showHeader.set(false);
+    } else {
+      this._showHeader.set(true);
+    }
+    // if (e.deltaY)
     const sectionInViewport =
       this.sections &&
       Array.from(this.sections)?.map((section: HTMLElement) => {
@@ -84,6 +92,10 @@ export class HeaderComponent {
 
   get activeSection(): string {
     return this._activeSection();
+  }
+
+  get showHeader(): boolean {
+    return this._showHeader();
   }
 
   get isSmallScreen(): boolean {
