@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TrainingFormComponent } from './training-form.component';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
 
 describe('TrainingFormComponent', () => {
   let component: TrainingFormComponent;
@@ -8,7 +12,11 @@ describe('TrainingFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TrainingFormComponent],
+      imports: [
+        TrainingFormComponent,
+        BrowserAnimationsModule,
+        NoopAnimationsModule,
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TrainingFormComponent);

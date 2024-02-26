@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { BannerComponent } from './banner.component';
 import { MatCardModule } from '@angular/material/card';
 import { By } from '@angular/platform-browser';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('BannerComponent', () => {
   let component: BannerComponent;
@@ -10,8 +11,7 @@ describe('BannerComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [BannerComponent],
-      imports: [MatCardModule],
+      imports: [MatCardModule, BannerComponent, RouterTestingModule],
     }).compileComponents();
   }));
 
