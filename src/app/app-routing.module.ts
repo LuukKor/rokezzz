@@ -21,6 +21,11 @@ const routes: Routes = [
         (x) => x.ExampleComponent,
       ),
   },
+  {
+    path: '**',
+    loadComponent: () =>
+      import('./pages/404/404.component').then((x) => x.NotFoundComponent),
+  },
 ];
 
 @NgModule({

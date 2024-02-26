@@ -1,3 +1,5 @@
+export const PAGE_TITLE = 'Rokezzz';
+
 interface IPages {
   label: string;
   path: string;

@@ -3,16 +3,16 @@ import { Title } from '@angular/platform-browser';
 import { PAGE_TITLE } from '@/constants';
 
 @Component({
-  selector: 'app-example',
-  templateUrl: './example.component.html',
+  selector: 'app-404',
+  templateUrl: './404.component.html',
   standalone: true,
   imports: [],
-  styleUrls: ['./example.component.scss'],
+  styleUrls: ['./404.component.scss'],
 })
-export class ExampleComponent implements OnInit {
+export class NotFoundComponent implements OnInit {
   constructor(private _titleService: Title) {}
 
   ngOnInit(): void {
-    this._titleService.setTitle(`${PAGE_TITLE} - Example`);
+    this._titleService.setTitle(`${PAGE_TITLE} - 404`);
   }
 }

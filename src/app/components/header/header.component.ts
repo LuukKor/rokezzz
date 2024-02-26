@@ -69,7 +69,6 @@ export class HeaderComponent {
 
   @HostListener('document:wheel', ['$event'])
   onWheel(e: WheelEvent): void {
-    console.log(e.deltaY);
     if (e.deltaY > -1) {
       this._showHeader.set(false);
     } else {
