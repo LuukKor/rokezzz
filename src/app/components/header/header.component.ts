@@ -4,7 +4,7 @@ import {
   HostListener,
   signal,
 } from '@angular/core';
-import { PAGES, SCROLL_Y_OFFSET } from '@/constants';
+import { SCROLL_Y_OFFSET } from '@/constants';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
@@ -19,6 +19,40 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ResponsiveService } from '@/services/responsive.service';
+import { IPages } from '@/interfaces';
+
+const PAGES: IPages[] = [
+  {
+    label: 'O mnie',
+    path: '/',
+    fragment: 'o-mnie',
+  },
+  {
+    label: 'Osiągnięcia',
+    path: '/example',
+    fragment: '1',
+  },
+  {
+    label: 'Przemiany',
+    path: '/example',
+    fragment: '2',
+  },
+  {
+    label: 'Galeria',
+    path: '/example',
+    fragment: '3',
+  },
+  {
+    label: 'Kontakt',
+    path: '/',
+    fragment: 'kontakt',
+  },
+  {
+    label: 'Umów trening',
+    path: '/',
+    fragment: 'umow-trening',
+  },
+];
 
 function isInViewport(element: HTMLElement): boolean {
   const rect = element.getBoundingClientRect();
@@ -74,7 +108,7 @@ export class HeaderComponent {
     } else {
       this._showHeader.set(true);
     }
-    // if (e.deltaY)
+
     const sectionInViewport =
       this.sections &&
       Array.from(this.sections)?.map((section: HTMLElement) => {
