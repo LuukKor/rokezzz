@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
+import { SCROLL_Y_OFFSET } from '@/constants';
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
-  enableViewTransitions: true,
-  useHash: false,
   anchorScrolling: 'enabled',
-  scrollOffset: [0, 100],
+  scrollOffset: [0, SCROLL_Y_OFFSET],
 };
 
 const routes: Routes = [

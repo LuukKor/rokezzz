@@ -22,6 +22,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './banner.component.scss',
 })
 export class BannerComponent {
-  protected readonly Breakpoints = Breakpoints;
+  readonly Breakpoints = Breakpoints;
   @ViewChild('container') container!: ElementRef;
 }

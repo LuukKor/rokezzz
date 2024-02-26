@@ -21,6 +21,7 @@ export const PAGES: IPages[] = [
   {
     label: 'O mnie',
     path: '/',
+    fragment: 'o-mnie',
   },
   {
     label: 'Osiągnięcia',
@@ -76,3 +77,5 @@ export const CONTACT_DATA: IContactData = {
   city: 'Warszawa',
   postCode: '00-000',
 };
+
+export const SCROLL_Y_OFFSET = 100;

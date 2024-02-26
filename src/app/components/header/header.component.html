@@ -13,6 +13,7 @@
             [fragment]="page?.fragment"
             routerLinkActive="active"
             [routerLinkActiveOptions]="linkActiveOptions"
+            [class.active]="page?.fragment === activeSection"
           >
             {{ page.label }}
           </a>
